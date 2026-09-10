@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Karina Fake Video Call</title>
+<meta name="description" content="Privacy policy for the Karina Fake Video Call Android app: what the app handles, why, who else sees it, how long it is kept, and how to delete it.">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="fonts.css">
+<style>
+/* ─────────────────────────────────────────────────────────────────────────
+   The printed timetable, not the lit board. Same world as the app
+   (src/design/tokens.ts) but inverted for its real use scene: a long legal
+   text, read on a phone in daylight or by a reviewer on a desktop, and
+   printed as often as it is read. Light by default, dark when the reader
+   asks for it. Legibility outranks expression on this page.
+
+   This folder is the deployable unit — index.html plus fonts.css. Copy the
+   whole folder to a public host; nothing else is required and nothing is
+   fetched from the network.
+   ───────────────────────────────────────────────────────────────────────── */
+:root{
+  --u1:4px; --u2:8px; --u3:12px; --u4:16px; --u6:24px;
+  --u8:32px; --u10:40px; --u12:48px; --u16:64px;
+
+  --paper:#F2F0EA;        /* painted letter white, now the ground */
+  --paper-raised:#FBFAF7;
+  --rule:#D6D3CA;
+  --rule-soft:#E6E3DB;
+  --ink:#14171C;
+  --ink-dim:#4A5058;
+  --ink-faint:#6E7378;    /* brushed steel */
+  --amber:#8A5A00;        /* the pending lamp, darkened to carry text on paper */
+  --amber-lamp:#FFB020;
+  --accent-bg:#FDF4E3;
+
+  --font-flap:"Barlow Condensed","Arial Narrow",Haettenschweiler,sans-serif-condensed,sans-serif;
+  --font-body:"Inter","Segoe UI",Roboto,system-ui,sans-serif;
+  --measure:72ch;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#0E1013; --paper-raised:#191C21;
+    --rule:#3A3E43; --rule-soft:#22262C;
+    --ink:#F2F0EA; --ink-dim:#9BA0A6; --ink-faint:#878C93;
+    --amber:#FFB020; --accent-bg:#191C21;
+  }
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--font-body);font-size:16px;line-height:1.7;
+}
+::selection{background:var(--amber-lamp);color:#0A0C0E}
+:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+
+a{color:var(--amber);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+
+/* Frame header — the one piece of the board that survives onto paper. */
+.frame{background:var(--paper-raised);border-bottom:1px solid var(--rule)}
+.frame-inner{max-width:820px;margin:0 auto;padding:var(--u4) var(--u6);display:flex;align-items:center;gap:var(--u2)}
+.lamp{width:var(--u2);height:var(--u2);border-radius:999px;background:var(--amber-lamp);flex:none;box-shadow:0 0 var(--u3) rgba(255,176,32,.5)}
+.board-name{font-weight:600;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--ink-faint)}
+
+main{max-width:820px;margin:0 auto;padding:var(--u12) var(--u6) var(--u16)}
+
+h1{
+  font-family:var(--font-flap);font-weight:700;
+  font-size:clamp(34px,6.5vw,54px);line-height:1.02;letter-spacing:.5px;
+  text-transform:uppercase;margin:0 0 var(--u6);
+}
+h2{
+  font-family:var(--font-flap);font-weight:700;
+  font-size:clamp(22px,3.2vw,28px);line-height:1.15;letter-spacing:.4px;
+  text-transform:uppercase;margin:var(--u12) 0 var(--u3);
+  padding-bottom:var(--u2);border-bottom:1px solid var(--rule);
+}
+h3{
+  font-family:var(--font-body);font-weight:600;font-size:17px;line-height:1.4;
+  margin:var(--u8) 0 var(--u2);color:var(--ink);
+}
+/* The policy quotes full URLs inline; without this they push the page wide on a phone. */
+p,li,td,dd{overflow-wrap:anywhere}
+p,li{max-width:var(--measure)}
+p{margin:0 0 var(--u4)}
+ul{margin:0 0 var(--u4);padding-left:var(--u6)}
+li{margin-bottom:var(--u2)}
+strong{font-weight:600}
+code{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:.88em;background:var(--rule-soft);padding:1px 5px;border-radius:2px;
+}
+
+/* Masthead block: the identity fields. */
+.meta{
+  background:var(--paper-raised);border:1px solid var(--rule);border-radius:2px;
+  padding:var(--u4) var(--u6);margin:0 0 var(--u8);max-width:var(--measure);
+}
+.meta dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:var(--u1) var(--u4)}
+.meta dt{font-weight:600;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--ink-faint);padding-top:5px}
+.meta dd{margin:0}
+
+.standfirst{font-size:18px;line-height:1.65;color:var(--ink-dim)}
+
+/* The short version earns the one tinted panel on the page. */
+.summary{
+  background:var(--accent-bg);border:1px solid var(--rule);border-radius:2px;
+  padding:var(--u6);margin:0 0 var(--u4);
+}
+.summary ul{margin:0;padding-left:var(--u6)}
+.summary li:last-child{margin-bottom:0}
+
+.scroller{overflow-x:auto;margin:0 0 var(--u6);border-bottom:1px solid var(--rule-soft)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:15px;line-height:1.55}
+th{
+  text-align:left;font-weight:600;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;
+  color:var(--ink-faint);padding:var(--u3);border-bottom:1px solid var(--rule);vertical-align:bottom;
+}
+td{padding:var(--u3);border-bottom:1px solid var(--rule-soft);color:var(--ink-dim);vertical-align:top}
+td:first-child{color:var(--ink);font-weight:500}
+
+hr{border:0;border-top:1px solid var(--rule);margin:var(--u12) 0}
+
+footer{border-top:1px solid var(--rule);margin-top:var(--u16);padding-top:var(--u6);color:var(--ink-faint);font-size:14px}
+footer p{margin:0 0 var(--u2)}
+
+@media (max-width:640px){
+  main{padding:var(--u8) var(--u4) var(--u12)}
+  .frame-inner{padding:var(--u3) var(--u4)}
+  .meta{padding:var(--u4)}
+  .meta dl{grid-template-columns:1fr;gap:0}
+  .meta dt{padding-top:var(--u2)}
+  .summary{padding:var(--u4)}
+  body{font-size:16px}
+}
+
+@media print{
+  :root{--paper:#fff;--paper-raised:#fff;--ink:#000;--ink-dim:#222;--ink-faint:#555;--amber:#000;--accent-bg:#fff;--rule:#bbb;--rule-soft:#ddd}
+  body{font-size:10.5pt;line-height:1.5}
+  main{max-width:none;padding:0}
+  .frame{border-bottom:1px solid #bbb}
+  .lamp{box-shadow:none;border:1px solid #666}
+  h2{page-break-after:avoid}
+  h2,h3{page-break-inside:avoid}
+  tr,li{page-break-inside:avoid}
+  a{color:#000}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:8pt;color:#555;word-break:break-all}
+  .summary{border:1px solid #bbb}
+}
+</style>
+</head>
+<body>
+
+<header class="frame">
+  <div class="frame-inner">
+    <span class="lamp" aria-hidden="true"></span>
+    <span class="board-name">Karina Fake Video Call</span>
+  </div>
+</header>
+
+<main>
+  <h1>Privacy Policy</h1>
+
+  <div class="meta">
+    <dl>
+      <dt>Effective date</dt><dd>9 September 2026</dd>
+      <dt>Developer</dt><dd>NextGen (&ldquo;we&rdquo;, &ldquo;us&rdquo;)</dd>
+      <dt>Contact</dt><dd><a href="mailto:nextgentrainingacademy88@gmail.com">nextgentrainingacademy88@gmail.com</a></dd>
+      <dt>App</dt><dd>Karina Fake Video Call, Android package <code>com.nextgen.karinacall</code></dd>
+    </dl>
+  </div>
+
+  <p class="standfirst">This policy explains what information the app handles, why, who else sees it, how long it is kept, and what you can do about it. The short version is directly below; the rest is the detail.</p>
+
+  <h2>1. The short version</h2>
+  <div class="summary">
+    <ul>
+      <li><strong>No account.</strong> The app never asks for your name, email address, phone number or password.</li>
+      <li><strong>Chat messages leave your phone.</strong> When you use the AI chat, the messages you type are sent to our server and forwarded to a third-party AI provider so a reply can be written. We keep chat messages for up to 30 days for abuse review, then delete them.</li>
+      <li><strong>A random device identifier</strong> is generated by the app and sent with chat requests so we can limit how many messages one device can send. It is not your Google account, phone number or advertising ID.</li>
+      <li><strong>The camera stays on your phone.</strong> Camera frames are shown on screen only. They are never recorded by the app and never uploaded.</li>
+      <li><strong>Ads.</strong> The app shows ads from Google AdMob, which uses your device&rsquo;s advertising ID. You will be asked for consent where the law requires it.</li>
+      <li><strong>Purchases</strong> go through Google Play. We never see your payment details.</li>
+      <li><strong>Everything else stays on your device</strong>: scheduled calls, chat history, purchase status and cached character media.</li>
+    </ul>
+  </div>
+
+  <h2>2. What the app does</h2>
+  <p>Karina Fake Video Call is an entertainment app. It simulates incoming and outgoing video and voice calls, simulates a live stream using your front camera, and offers a text chat with a fictional character whose replies are written by an AI model. The characters are fictional; the app is not affiliated with or endorsed by any real person or organisation.</p>
+
+  <h2>3. Information we handle, and why</h2>
+
+  <h3>3.1 Device identifier (app-generated)</h3>
+  <p>The first time the app needs to contact our server, it generates a random identifier and stores it on your device. This identifier is sent as a request header with chat messages and content reports.</p>
+  <ul>
+    <li><strong>Why:</strong> to enforce a per-device limit on how many chat messages can be sent, and to group reports and abuse-review records. This is our only defence against automated abuse of the AI chat, because there is no account.</li>
+    <li><strong>What it is not:</strong> it is not derived from your hardware, your Google account, your phone number or your advertising ID, and we cannot use it to find out who you are.</li>
+    <li><strong>How to reset it:</strong> clearing the app&rsquo;s data (Android Settings &gt; Apps &gt; Karina Fake Video Call &gt; Storage &gt; Clear data) or uninstalling the app deletes it. A new one is generated on next use.</li>
+  </ul>
+
+  <h3>3.2 Chat messages</h3>
+  <p>When you send a message in the chat, the app sends that message, together with up to the previous 20 messages in that conversation (yours and the character&rsquo;s), to our server. Our server adds the character&rsquo;s instructions and forwards the conversation to a third-party large-language-model provider, <strong>OpenAI</strong> (OpenAI, L.L.C.), which returns the reply. The reply is streamed back to your phone and stored in the app&rsquo;s local database.</p>
+  <ul>
+    <li><strong>Why:</strong> to generate the character&rsquo;s reply. There is no other use.</li>
+    <li><strong>Retention on our server:</strong> we keep chat messages, the reply, the device identifier and the timestamp for <strong>up to 30 days</strong> so we can investigate reports and abuse, then delete them automatically.</li>
+    <li><strong>Retention by the AI provider:</strong> OpenAI processes the text to generate the reply and may retain it briefly for security and abuse monitoring under its own terms. We do not send it your device identifier, and we send no other information about you. OpenAI&rsquo;s policy: <a href="https://openai.com/policies/privacy-policy/">https://openai.com/policies/privacy-policy/</a>.</li>
+    <li><strong>What not to type:</strong> the chat is a simulation for entertainment. Do not enter personal details, passwords, financial information or anything you would not want stored for 30 days.</li>
+    <li><strong>Offline:</strong> when your phone has no connection, or our server cannot be reached, the app answers from a short list of scripted lines stored on the device. Nothing is sent in that case.</li>
+  </ul>
+  <p>Chat history is stored on your device only. We do not upload your history; the server sees only the recent turns needed to write the next reply.</p>
+
+  <h3>3.3 In-app reports</h3>
+  <p>Each AI reply has a Report action. A report contains the reported message, your reason, the character, and your device identifier. If the report cannot be sent immediately it is stored on your device and sent when a connection is available.</p>
+  <ul>
+    <li><strong>Why:</strong> to review problematic AI output and improve the character&rsquo;s instructions. Reviewing reports is a Google Play requirement for apps that generate content with AI.</li>
+    <li><strong>Retention:</strong> reports are kept for up to 12 months, then deleted. The reported message itself is subject to the 30-day chat retention above; the report record keeps its own copy for the review period.</li>
+  </ul>
+
+  <h3>3.4 Camera</h3>
+  <p>The app asks for camera permission so that your front camera can be shown as your self-view during a simulated video call and as the &ldquo;broadcast&rdquo; during a simulated live stream.</p>
+  <ul>
+    <li>Camera frames are rendered to the screen and discarded. The app has no code path that records, saves, screenshots or uploads camera frames, and it does not request storage or microphone permission.</li>
+    <li>Nothing is actually broadcast. The viewer count, comments, hearts and donations in the live stream are generated on your device.</li>
+    <li>If you deny camera permission the call and live-stream screens still work; the self-view area simply stays blank.</li>
+  </ul>
+
+  <h3>3.5 Microphone</h3>
+  <p>The app does not request microphone permission and does not record audio. The Mute button on the call screen is part of the simulation.</p>
+
+  <h3>3.6 Notifications and alarms</h3>
+  <p>The scheduled-call feature works by asking Android to show a call-style notification at the time you chose, even when the app is closed. For this the app requests:</p>
+  <ul>
+    <li><strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code>): to show the incoming-call and message notifications.</li>
+    <li><strong>Exact alarms</strong> (<code>SCHEDULE_EXACT_ALARM</code> / <code>USE_EXACT_ALARM</code>): so the call fires at the chosen second rather than whenever the system gets around to it.</li>
+    <li><strong>Full-screen notifications</strong> (<code>USE_FULL_SCREEN_INTENT</code>), <strong>wake lock</strong>, <strong>vibration</strong>, and the ability to <strong>show over the lock screen and turn the screen on</strong>: so the call can light up and ring on a locked phone. On Android 14 and later the system may not grant full-screen behaviour to non-dialer apps, in which case a heads-up notification is shown instead.</li>
+    <li><strong>Run after reboot</strong> (<code>RECEIVE_BOOT_COMPLETED</code>): so scheduled calls survive a restart.</li>
+    <li><strong>Battery-optimisation exemption:</strong> the app may ask you to turn off battery optimisation for it, and on some manufacturers&rsquo; devices to allow auto-start, because otherwise the system may silently drop the alarm.</li>
+  </ul>
+  <p>These permissions are used only to deliver notifications you scheduled yourself. Scheduled calls, their times and any message text you typed are stored on your device and never sent to us.</p>
+
+  <h3>3.7 Advertising (Google AdMob)</h3>
+  <p>The free version shows ads served by Google AdMob, part of Google LLC. The AdMob SDK runs inside the app and collects information itself, in particular:</p>
+  <ul>
+    <li>your device&rsquo;s <strong>advertising ID</strong> (and Google&rsquo;s app set ID);</li>
+    <li><strong>approximate location</strong> derived from your IP address;</li>
+    <li>information about the <strong>device and app</strong> (model, OS version, app version, screen size, language) and about <strong>how you interact with ads</strong> (views, clicks);</li>
+    <li><strong>diagnostic</strong> information about the SDK&rsquo;s own operation.</li>
+  </ul>
+  <p>Google uses this to select, serve, measure and, where you have consented, personalise ads, and to detect fraud. Google&rsquo;s policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a> and <a href="https://support.google.com/admob/answer/6128543">https://support.google.com/admob/answer/6128543</a>.</p>
+  <ul>
+    <li><strong>Consent.</strong> In the European Economic Area, the United Kingdom and Switzerland the app shows Google&rsquo;s User Messaging Platform consent form before requesting ads and honours your choice; you can change it later from the app. In US states with privacy laws the same mechanism provides the required opt-out from &ldquo;sale&rdquo; or &ldquo;sharing&rdquo; of personal information for advertising. Elsewhere, ads may be personalised based on the advertising ID unless you disable personalisation in Android settings.</li>
+    <li><strong>Your controls.</strong> Android Settings &gt; Privacy &gt; Ads lets you reset or delete your advertising ID and opt out of ad personalisation.</li>
+    <li><strong>Removing ads.</strong> The Remove Ads, weekly and lifetime purchases stop the app from requesting ads at all.</li>
+    <li>We do not pass any of your information to Google other than what the SDK collects itself, and we do not use the advertising ID for anything else.</li>
+    <li>The app contains no analytics or crash-reporting SDK of our own.</li>
+  </ul>
+
+  <h3>3.8 Purchases (Google Play Billing)</h3>
+  <p>Purchases are made through Google Play. Google handles payment and shows us only the product purchased and a purchase token; we never receive your name, card details or billing address. The app stores your purchase status on your device so features stay unlocked without a connection. We do not run a purchase server, so purchase records exist only on your device and in your Google Play account. Google&rsquo;s policy for purchases: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>.</p>
+
+  <h3>3.9 Character media and the content manifest</h3>
+  <p>Character pictures and video clips are not bundled in the app. On first use the app downloads a small content list (&ldquo;manifest&rdquo;) and then the media it needs from our content server (hosted on Supabase, see section 5), and caches them on your device so they download only once.</p>
+  <p>Like any download, these requests reveal your <strong>IP address</strong> and basic request details to the server, which are kept in ordinary server logs for a short period (at most 30 days) for reliability and security and are not combined with your chat data or device identifier.</p>
+
+  <h3>3.10 Data that stays on your device</h3>
+  <p>The following is stored in the app&rsquo;s private storage on your phone and is never uploaded: scheduled calls and their settings; chat history; the free-message counter; purchase status; queued reports until sent; cached media; the device identifier. It is deleted when you clear the app&rsquo;s data or uninstall.</p>
+
+  <h2>4. What we do not do</h2>
+  <ul>
+    <li>We do not collect names, email addresses, phone numbers, contacts, precise location, photos, files, calendar entries or browsing history.</li>
+    <li>We do not sell personal information.</li>
+    <li>We do not use your chat messages to train AI models.</li>
+    <li>We do not record or upload camera or audio.</li>
+    <li>We do not generate images, voices or likenesses of real people.</li>
+  </ul>
+
+  <h2>5. Who else handles your information</h2>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Provider</th><th>Role</th><th>What they see</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Supabase, Inc.</td>
+          <td>Hosting for our chat proxy, report inbox, content manifest and media files (servers in a region we select).</td>
+          <td>Chat requests and 30-day chat logs, reports, device identifiers, IP addresses in server logs, media download requests.</td>
+        </tr>
+        <tr>
+          <td>OpenAI, L.L.C.</td>
+          <td>Generates the chat reply.</td>
+          <td>The conversation text sent for that reply (up to the last 20 turns). Not the device identifier.</td>
+        </tr>
+        <tr>
+          <td>Google LLC (AdMob)</td>
+          <td>Serves ads.</td>
+          <td>Advertising ID, IP-derived approximate location, device and ad-interaction data, as described in 3.7.</td>
+        </tr>
+        <tr>
+          <td>Google LLC (Google Play)</td>
+          <td>Distributes the app and processes purchases.</td>
+          <td>Your Google account and payment data, under Google&rsquo;s own policy. We receive product and purchase-token information only.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>These providers process data on our behalf under their published terms and data-processing agreements. Some are located in the United States or other countries; see section 9.</p>
+
+  <h2>6. How long we keep information</h2>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Data</th><th>Retained</th></tr></thead>
+      <tbody>
+        <tr><td>Chat messages and replies on our server</td><td>Up to 30 days, then deleted automatically</td></tr>
+        <tr><td>Rate-limit counters (device identifier + counts)</td><td>Rolling windows of hours to days; discarded when the window closes</td></tr>
+        <tr><td>In-app reports</td><td>Up to 12 months</td></tr>
+        <tr><td>Server request logs (IP address, endpoint, timestamp)</td><td>Up to 30 days</td></tr>
+        <tr><td>Everything stored on your device</td><td>Until you clear app data or uninstall</td></tr>
+        <tr><td>AdMob data</td><td>Under Google&rsquo;s retention rules</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>7. Your rights and choices</h2>
+  <p>Depending on where you live (for example the EU/UK GDPR, the California CCPA/CPRA, Malaysia&rsquo;s PDPA or similar laws) you may have the right to access, correct, delete, restrict or object to the processing of your personal information, to data portability, to withdraw consent, and to complain to a supervisory authority. We honour these requests regardless of where you live, to the extent we can identify the data as yours (see section 8).</p>
+  <p>Choices you can make in the app or on your phone:</p>
+  <ul>
+    <li>Do not use the chat: nothing is sent to our server unless you send a message.</li>
+    <li>Deny camera permission: the app still works.</li>
+    <li>Reset or delete the advertising ID and opt out of personalised ads in Android settings; change your consent choice from the app&rsquo;s ad-consent option where shown.</li>
+    <li>Buy Remove Ads or a pass to stop ad requests entirely.</li>
+    <li>Clear the app&rsquo;s data to erase everything it stores locally, including the device identifier.</li>
+  </ul>
+  <p>We do not treat anyone differently for exercising a privacy right.</p>
+
+  <h2>8. Deleting your data</h2>
+  <p><strong>On your device:</strong> Android Settings &gt; Apps &gt; Karina Fake Video Call &gt; Storage &gt; <strong>Clear data</strong>, or uninstall the app. This deletes chat history, scheduled calls, purchase status, cached media and the device identifier. (Purchases can be restored later through Google Play.)</p>
+  <p><strong>On our server:</strong> email <a href="mailto:nextgentrainingacademy88@gmail.com?subject=Data%20deletion">nextgentrainingacademy88@gmail.com</a> with the subject &ldquo;Data deletion&rdquo; and, if you can, the approximate dates you used the chat. Because we hold no account and the device identifier is random, we may not be able to match server records to you without it; if the app shows your device identifier (for example in an About or Privacy screen), include it. In every case, chat messages are deleted automatically within 30 days and report records within 12 months, so the data expires even if we cannot match it. We respond to deletion requests within 30 days.</p>
+  <p><strong>Ad data held by Google</strong> is controlled through your Google account and Android ad settings, not by us.</p>
+
+  <h2>9. International transfers</h2>
+  <p>Our servers and providers may be located outside your country, including in the United States. Where required, transfers rely on standard contractual clauses or an equivalent lawful mechanism offered by the provider.</p>
+
+  <h2>10. Children</h2>
+  <p>This app is not directed at children. It is intended for people aged 16 and over, and its Google Play target audience is set accordingly. We do not knowingly collect personal information from anyone under 16 (or under 13 where that is the applicable threshold). If you believe a child has used the chat feature, email us and we will delete the associated server records.</p>
+
+  <h2>11. Security</h2>
+  <p>Every connection between the app and our servers, our AI provider and Google uses HTTPS (TLS). Our database is not exposed to the internet; the app can only reach it through server functions that accept the limited requests described above. AI provider API keys are held on the server, never in the app. Chat logs are stored in access-controlled infrastructure and deleted on the schedule in section 6. No system is perfectly secure, which is one reason we keep so little.</p>
+
+  <h2>12. Changes to this policy</h2>
+  <p>When we change this policy we will update the effective date at the top and, for material changes, show a notice in the app or on its store listing before the change takes effect. Earlier versions are available on request.</p>
+
+  <h2>13. Contact</h2>
+  <p>NextGen<br>
+  Email: <a href="mailto:nextgentrainingacademy88@gmail.com">nextgentrainingacademy88@gmail.com</a></p>
+  <p>If you are in the EU/UK you may also lodge a complaint with your local data protection authority.</p>
+
+  <footer>
+    <p>Karina Fake Video Call is an entertainment app. Calls, live streams and chat replies are simulated.</p>
+    <p>Effective 9 September 2026.</p>
+  </footer>
+</main>
+
+</body>
+</html>
