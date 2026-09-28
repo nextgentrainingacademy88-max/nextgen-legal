@@ -14,6 +14,7 @@ fetched from the network — each folder is a self-contained static page.
 | App | Document | URL |
 |---|---|---|
 | Karina Fake Video Call | Privacy policy | https://legal.nextgentrainingacademy.com/karina-fake-video-call/ |
+| Wonyoung Fake Video Call | Privacy policy | https://legal.nextgentrainingacademy.com/wonyoung-fake-video-call/ |
 
 Source of truth for the Karina policy is `docs/PRIVACY_POLICY.md` in that app's
 repo; `docs/privacy/` there is the deployable copy this folder mirrors. Edit it
