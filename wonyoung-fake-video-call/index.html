@@ -166,7 +166,7 @@ footer p{margin:0 0 var(--u2)}
 
   <div class="meta">
     <dl>
-      <dt>Effective date</dt><dd>28 September 2026</dd>
+      <dt>Effective date</dt><dd>9 October 2026</dd>
       <dt>Developer</dt><dd>NextGen (&ldquo;we&rdquo;, &ldquo;us&rdquo;)</dd>
       <dt>Contact</dt><dd><a href="mailto:nextgentrainingacademy88@gmail.com">nextgentrainingacademy88@gmail.com</a></dd>
       <dt>App</dt><dd>Wonyoung Fake Video Call, Android package <code>com.nextgen.wonyoungcall</code></dd>
@@ -222,7 +222,8 @@ footer p{margin:0 0 var(--u2)}
   <h3>3.4 Camera</h3>
   <p>The app asks for camera permission so that your front camera can be shown as your self-view during a simulated video call and as the &ldquo;broadcast&rdquo; during a simulated live stream.</p>
   <ul>
-    <li>Camera frames are rendered to the screen and discarded. The app has no code path that records, saves, screenshots or uploads camera frames, and it does not request storage or microphone permission.</li>
+    <li>Camera frames are rendered to the screen and discarded. The app has no code path that records, saves, screenshots or uploads camera frames, and it does not request microphone permission.</li>
+    <li>You can give your simulated live stream a profile picture by taking a photo or choosing one from your gallery. On Android 12 and older, choosing from the gallery asks for photo (storage) access. The picture stays on your device and is never uploaded.</li>
     <li>Nothing is actually broadcast. The viewer count, comments, hearts and donations in the live stream are generated on your device.</li>
     <li>If you deny camera permission the call and live-stream screens still work; the self-view area simply stays blank.</li>
   </ul>
@@ -234,7 +235,7 @@ footer p{margin:0 0 var(--u2)}
   <p>The scheduled-call feature works by asking Android to show a call-style notification at the time you chose, even when the app is closed. For this the app requests:</p>
   <ul>
     <li><strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code>): to show the incoming-call and message notifications.</li>
-    <li><strong>Exact alarms</strong> (<code>SCHEDULE_EXACT_ALARM</code> / <code>USE_EXACT_ALARM</code>): so the call fires at the chosen second rather than whenever the system gets around to it.</li>
+    <li><strong>Exact alarms</strong> (<code>SCHEDULE_EXACT_ALARM</code>): so the call fires at the chosen second rather than whenever the system gets around to it.</li>
     <li><strong>Full-screen notifications</strong> (<code>USE_FULL_SCREEN_INTENT</code>), <strong>wake lock</strong>, <strong>vibration</strong>, and the ability to <strong>show over the lock screen and turn the screen on</strong>: so the call can light up and ring on a locked phone. On Android 14 and later the system may not grant full-screen behaviour to non-dialer apps, in which case a heads-up notification is shown instead.</li>
     <li><strong>Run after reboot</strong> (<code>RECEIVE_BOOT_COMPLETED</code>): so scheduled calls survive a restart.</li>
     <li><strong>Battery-optimisation exemption:</strong> the app may ask you to turn off battery optimisation for it, and on some manufacturers&rsquo; devices to allow auto-start, because otherwise the system may silently drop the alarm.</li>
@@ -262,7 +263,7 @@ footer p{margin:0 0 var(--u2)}
   <p>Purchases are made through Google Play. Google handles payment and shows us only the product purchased and a purchase token; we never receive your name, card details or billing address. The app stores your purchase status on your device so features stay unlocked without a connection. We do not run a purchase server, so purchase records exist only on your device and in your Google Play account. Google&rsquo;s policy for purchases: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>.</p>
 
   <h3>3.9 Character media and the content manifest</h3>
-  <p>Character pictures and video clips are not bundled in the app. On first use the app downloads a small content list (&ldquo;manifest&rdquo;) and then the media it needs from our content server (hosted on Supabase, see section 5), and caches them on your device so they download only once.</p>
+  <p>The pictures and video clips for the built-in characters ship inside the app. The app may also download a small content list (&ldquo;manifest&rdquo;) and additional media from our content server (hosted on Supabase, see section 5), and caches them on your device so they download only once.</p>
   <p>Like any download, these requests reveal your <strong>IP address</strong> and basic request details to the server, which are kept in ordinary server logs for a short period (at most 30 days) for reliability and security and are not combined with your chat data or device identifier.</p>
 
   <h3>3.10 Data that stays on your device</h3>
@@ -358,7 +359,7 @@ footer p{margin:0 0 var(--u2)}
 
   <footer>
     <p>Wonyoung Fake Video Call is an entertainment app. Calls, live streams and chat replies are simulated.</p>
-    <p>Effective 28 September 2026.</p>
+    <p>Effective 9 October 2026.</p>
   </footer>
 </main>
 
